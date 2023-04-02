@@ -9,9 +9,9 @@ def single(single_data_model: {}):
     return single_model
 
 
-def pages(data_list: []):
+def pages(data_list: [], page=1):
     page_model = {
-        "page": 1,
+        "page": page,
         "per_page": 6,
         "total": 12,
         "total_pages": 2,

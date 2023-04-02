@@ -55,10 +55,11 @@ def test_get_user():
 
 
 # pytest test_main.py::test_get_user_negative -s -v
-def test_get_user_negative():
+@pytest.mark.parametrize("user_id", (23, 999, -100, 322))
+def test_get_user_negative(user_id):
     expected = {}
 
-    response = endpoints.get_user(23)
+    response = endpoints.get_user(user_id) # 23
     assert response.status_code == 404
     assert response.json() == expected
 
