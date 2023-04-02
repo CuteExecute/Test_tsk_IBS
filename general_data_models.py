@@ -22,3 +22,7 @@ def pages(data_list: []):
         }
     }
     return page_model
+
+# class Pages:
+#     json_object: dict
+#     page: str = json_object["page"]
